@@ -1,0 +1,24 @@
+<h1>趣味について</h1>
+<h3>Tweet一覧</h3>
+<%= link_to "新規投稿へ", new_hellos_path %>
+<div class="hellos-container">
+  <% @hellos.each do |t| %>
+    <div class="hello">
+    <%= form_tag({controller:"hellos",action:"index"}, method: :get) do %>
+      <%= text_field_tag :tag %>
+      <%= submit_tag 'タグを追加' %>
+    <% end %>
+    <% Tag.all.each do |t| %>
+        <%= image_tag t.image_url, size: "250x200" if t.image? %>
+         <li><%= check_box :tag_ids, t.name %><%= t.name %></li>
+       <% end %>
+    <%= submit_tag '検索' %>
+    <% end %>
+      <%= t.title %>
+      <%= t.created_at %>
+      <%= link_to "詳細へ", hello_path(t.id) %>
+      <%= link_to "編集する", edit_hello_path(t.id) %>
+      <%= button_to "削除する", hello_path(t.id), method: :delete %>
+    </div>
+    <% end %>
+</div>

@@ -1,0 +1,11 @@
+<h1>趣味について</h1>
+<h3>Tweet詳細</h3>
+<div class="hello">
+  <p><%= @hello.title %></p>
+  <p><%= @hello.created_at %></p>
+</div>
+<% @hello.tags.each do |tag| %>
+    <span><%= tag.name %></span>
+<% end %>
+
+<%= link_to "Tweet一覧に戻る", hellos_path %>

@@ -1,0 +1,35 @@
+
+
+<html>
+  <head>
+    <title>Kounenki</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+     <script src="https://kit.fontawesome.com/ed533c4393.js" crossorigin="anonymous"></script>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%#= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <h1>Kounenki</h1>
+      <div class="header-list">
+      <ul>
+        <li><%= link_to "TOP", tweets_top_path %></li>
+        <li><%= link_to "新規投稿",new_tweet_path %></li>
+          <li><%= link_to "診断", perfumes_path %></li>
+         <li><%= link_to "ログイン",user_session_url %></li>
+         
+      </ul>
+      </div>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <p>Copyright © GeekSalon All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

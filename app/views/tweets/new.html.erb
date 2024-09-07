@@ -1,0 +1,60 @@
+<h3 class="toukou">新規投稿</h3>
+<%= form_for @tweet do |f| %>
+  <div class="field">
+    <%= stylesheet_link_tag 'new', :media => "all" %>
+
+<div class="post-container">
+  
+    <p class="title">投稿フォーム</p>
+    <%= form_for(@tweet, :url => { controller:'tweets', action:'create'})do |f| %>
+    <%= f.label :投稿内容 %>
+        <br>
+        <%= f.text_field :title,size: 40%>
+
+        <br>
+        <div class="form-check form-check-inline"> 
+   <%= f.radio_button :release, '1' ,class:"form-check-input mb-3" %>
+   <%= f.label :release, '公開', value: 1 %>
+ </div>
+ <div class="form-check form-check-inline">
+   <%= f.radio_button :release, '0',class:"form-check-input mb-4" %>
+   <%= f.label :release, '非公開', value: 0 %>
+ </div>
+  </div>
+    <div class='form-group'>
+        <%= f.collection_check_boxes(:tag_ids, Tag.all, :id, :name) do |tag| %>
+            <div class='form-check'>
+                <%= tag.label class: 'form-check-label' do %>
+                  <%= tag.check_box class: 'form-check-input' %> 
+                    <%= tag.text %>
+                <% end %>
+           </div>
+         <% end %>
+    </div>
+    
+<% end %> 
+
+
+    
+
+<%= form_tag({controller:"tweets",action:"new"}, method: :get) do %>
+    <%= text_field_tag :tag %>
+    <%= submit_tag 'タグを追加' %>
+<% end %>
+        <div class="field">
+    <%= f.label :image %> 
+    <p><%= f.file_field :image %></p> 
+</div>
+    <%= f.submit "送信"%>
+    <br>
+    <% end %>
+</div>
+    <%# <%= f.label :症状について %>
+    
+    
+
+  
+
+<%# <%= f.submit "投稿する" %> 
+  
+<%= link_to "Tweet一覧に戻る", tweets_path %>

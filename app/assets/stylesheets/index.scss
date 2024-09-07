@@ -1,0 +1,105 @@
+.toukou {
+  font-size: 50px;
+  font-family: sans-serif;
+  width: 100%;
+  color: #7a2d2f;
+  padding: 1rem 2rem;
+  border-top: 3px dotted #7a2d2f;
+  border-bottom: 3px dotted #7a2d2f;
+} 
+
+.tweets-container {
+    width: 80%;
+    margin: 10px auto;
+  }
+  h3 {
+    width: 100px;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .tweet {
+    border-top: solid #00acee;
+    margin-top: 10px;
+    padding-top: 20px;
+  }
+    
+  //   #first-block {
+  //   background-image: url("../images/first-back.jpg");
+  //   background-size: cover;
+  //   width: 100%;
+  //   height: 550px;
+  // }
+  
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  
+  // .title-container {
+  //   text-align: center;
+  // }
+  
+  // h1 {
+  //   font-size: 80px;
+  //   font-family: serif;
+  //   color: #444;
+  // }
+  
+  // h3 {
+  //   font-size: 50px;
+  //   font-family: serif;
+  //   color: #444;
+  // }
+  
+  .main-box {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .time {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .kennsaku {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color:#7a2d2f
+} 
+
+.itiran {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color:#7a2d2f
+} 
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex; /* フレックスボックスを使用 */
+  max-width: 1200px;
+  margin: 0 auto; /* 中央に配置 */
+  padding: 20px;
+}
+
+.itiran {
+  flex: 3; /* 3:1 の比率でカラムを広くする */
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-right: 20px; /* サイドバーとの間に余白を設ける */
+}
+
+.kensaku {
+  flex: 1; /* サイドバーを小さくする */
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+
+

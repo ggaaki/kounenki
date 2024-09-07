@@ -1,0 +1,7 @@
+<% @perfumes.each do |t| %>
+    <% if t.number == @result %>
+        <div class="tweet">
+            あなたは<%= t.content %>です。
+        </div>
+    <% end %>
+<% end %>

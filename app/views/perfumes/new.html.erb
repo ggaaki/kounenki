@@ -1,0 +1,86 @@
+  <%= form_tag(perfumes_path, method: :get) do%>
+    <h3>Q.1 顔がほてる</h3>
+        <label>
+            <%= radio_button_tag :age, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :age, 1 %> はい
+        </label>
+    
+
+    <h3>Q.2 汗をかきやすい</h3>
+        <label>
+            <%= radio_button_tag :sex, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :sex, 1 %> はい
+        </label>
+
+    <h3>Q.3 腰や手足が冷えやすい</h3>
+        <label>
+            <%= radio_button_tag :glasses, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :glasses, 1 %> はい
+        </label>
+
+     <h3>Q.4 息切れ、動悸がする</h3>
+        <label> 
+            <%= radio_button_tag :paper, 0 %>いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :paper, 1 %> はい
+        </label>
+
+    <h3>Q.5 寝つきが悪い、眠りが浅い</h3>
+        <label>
+            <%= radio_button_tag :sleep, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :sleep, 1 %> はい
+        </label>
+
+    <h3>Q.6 怒りやすく、イライラする</h3>
+        <label>
+            <%= radio_button_tag :angry, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :angry, 1 %> はい
+        </label>
+     
+    <h3>Q.7 くよくよしたり、憂うつになる</h3>
+        <label>
+            <%= radio_button_tag :down, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :down, 1 %> はい
+        </label>
+
+    <h3>Q.8 頭痛、めまい、吐き気がよくある</h3>
+        <label>
+            <%= radio_button_tag :eye, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :eye, 1 %> はい
+        </label>
+
+    <h3>Q.9 疲れやすい</h3>
+        <label>
+            <%= radio_button_tag :tired, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :tired, 1 %> はい
+        </label>
+
+    <h3>Q.10 肩こり、腰痛、手足の痛みがある</h3>
+        <label>
+            <%= radio_button_tag :hand, 0 %> いいえ
+        </label>
+        <label>
+            <%= radio_button_tag :hand, 1 %> はい
+        </label>
+    <br>
+
+    <%= submit_tag '診断する'  %>
+ </div>
+ <% end %> 
